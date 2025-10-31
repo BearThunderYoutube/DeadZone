@@ -1,0 +1,43 @@
+# Roblox Studio Files
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+
+# Rojo Build Output
+build/
+build.rbxl
+build.rbxlx
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+
+# Node Modules (if using npm tools)
+node_modules/
+package-lock.json
+
+# Rojo
+*.project.json.lock
+
+# Selene (Lua linter)
+selene.toml
+
+# Other
+.luacheckrc
