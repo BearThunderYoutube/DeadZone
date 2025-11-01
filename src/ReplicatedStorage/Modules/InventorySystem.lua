@@ -39,6 +39,33 @@ local ItemDatabase = {
         MagazineSize = 17,
         Ammo = "9mm"
     },
+    ["SVD"] = {
+        Type = "Weapon",
+        Weight = 4.3,
+        Rarity = "Epic",
+        Damage = 75,
+        FireRate = 200,
+        MagazineSize = 10,
+        Ammo = "7.62x54mm"
+    },
+    ["Shotgun"] = {
+        Type = "Weapon",
+        Weight = 3.8,
+        Rarity = "Uncommon",
+        Damage = 80,
+        FireRate = 60,
+        MagazineSize = 8,
+        Ammo = "Buckshot"
+    },
+    ["MP5"] = {
+        Type = "Weapon",
+        Weight = 2.5,
+        Rarity = "Uncommon",
+        Damage = 28,
+        FireRate = 800,
+        MagazineSize = 30,
+        Ammo = "9mm"
+    },
 
     -- Ammo
     ["7.62x39mm"] = {
@@ -58,6 +85,18 @@ local ItemDatabase = {
         Weight = 0.008,
         Rarity = "Common",
         StackSize = 50
+    },
+    ["7.62x54mm"] = {
+        Type = "Ammo",
+        Weight = 0.020,
+        Rarity = "Uncommon",
+        StackSize = 40
+    },
+    ["Buckshot"] = {
+        Type = "Ammo",
+        Weight = 0.030,
+        Rarity = "Common",
+        StackSize = 30
     },
 
     -- Medical
@@ -82,6 +121,27 @@ local ItemDatabase = {
         Effect = "PainRelief",
         Duration = 120
     },
+    ["Antibiotics"] = {
+        Type = "Medical",
+        Weight = 0.08,
+        Rarity = "Rare",
+        Effect = "CureInfection",
+        UseTime = 4
+    },
+    ["Splint"] = {
+        Type = "Medical",
+        Weight = 0.3,
+        Rarity = "Uncommon",
+        Effect = "HealFracture",
+        UseTime = 8
+    },
+    ["Defibrillator"] = {
+        Type = "Medical",
+        Weight = 2.0,
+        Rarity = "Legendary",
+        Effect = "Revive",
+        UseTime = 10
+    },
 
     -- Food & Water
     ["WaterBottle"] = {
@@ -103,19 +163,106 @@ local ItemDatabase = {
         ThirstRestore = 25,
         StaminaBoost = 20
     },
-
-    -- Equipment
-    ["Backpack"] = {
-        Type = "Equipment",
-        Weight = 1.5,
+    ["MRE"] = {
+        Type = "Consumable",
+        Weight = 0.6,
         Rarity = "Uncommon",
-        BonusSlots = 8
+        HungerRestore = 60,
+        ThirstRestore = 10
     },
-    ["ArmorVest"] = {
-        Type = "Equipment",
-        Weight = 5.0,
+
+    -- Tools & Crafting
+    ["Wrench"] = {
+        Type = "Tool",
+        Weight = 0.8,
+        Rarity = "Common",
+        Durability = 100
+    },
+    ["Screwdriver"] = {
+        Type = "Tool",
+        Weight = 0.3,
+        Rarity = "Common",
+        Durability = 80
+    },
+    ["DuctTape"] = {
+        Type = "Crafting",
+        Weight = 0.2,
+        Rarity = "Common",
+        StackSize = 5
+    },
+    ["ScrapMetal"] = {
+        Type = "Crafting",
+        Weight = 1.5,
+        Rarity = "Common",
+        StackSize = 10
+    },
+    ["Electronics"] = {
+        Type = "Crafting",
+        Weight = 0.4,
+        Rarity = "Uncommon",
+        StackSize = 5
+    },
+
+    -- Special Items
+    ["GasMask"] = {
+        Type = "Special",
+        Weight = 1.2,
         Rarity = "Rare",
-        ArmorValue = 50
+        Protection = "Gas"
+    },
+    ["NightVision"] = {
+        Type = "Special",
+        Weight = 0.8,
+        Rarity = "Epic",
+        Effect = "NightVision"
+    },
+    ["ThermalScope"] = {
+        Type = "Attachment",
+        Weight = 0.5,
+        Rarity = "Legendary",
+        Effect = "ThermalVision"
+    },
+    ["Suppressor"] = {
+        Type = "Attachment",
+        Weight = 0.4,
+        Rarity = "Rare",
+        Effect = "ReduceNoise"
+    },
+    ["ExtendedMag"] = {
+        Type = "Attachment",
+        Weight = 0.2,
+        Rarity = "Uncommon",
+        Effect = "IncreaseMagSize"
+    },
+    ["RedDot"] = {
+        Type = "Attachment",
+        Weight = 0.1,
+        Rarity = "Common",
+        Effect = "ImproveAim"
+    },
+    ["Handcuffs"] = {
+        Type = "Tool",
+        Weight = 0.3,
+        Rarity = "Uncommon",
+        Effect = "Restrain"
+    },
+    ["Lockpick"] = {
+        Type = "Tool",
+        Weight = 0.1,
+        Rarity = "Uncommon",
+        Durability = 10
+    },
+    ["GPS"] = {
+        Type = "Special",
+        Weight = 0.3,
+        Rarity = "Rare",
+        Effect = "ShowMap"
+    },
+    ["Radio"] = {
+        Type = "Special",
+        Weight = 0.5,
+        Rarity = "Uncommon",
+        Effect = "Communication"
     }
 }
 

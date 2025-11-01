@@ -56,10 +56,17 @@ local GameSettings = {
 
     -- Extraction Settings
     Extraction = {
-        ExtractionTime = 30, -- seconds
+        ExtractionTime = 10, -- seconds
         MinPlayersForExtraction = 1,
         KeepItemsOnDeath = false,
         SafeZoneEnabled = true
+    },
+
+    -- Map Settings
+    Map = {
+        Size = 2048, -- studs (2048x2048 map)
+        CenterPosition = Vector3.new(0, 0, 0),
+        GridSize = 512 -- studs per grid cell (4x4 grid)
     },
 
     -- Loot Settings

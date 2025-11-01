@@ -140,7 +140,7 @@ function ExtractionPoint:CompleteExtraction(player)
 
     print(player.Name .. " successfully extracted at " .. self.Name)
 
-    -- Save player's inventory and stats
+    -- Fire extraction complete event
     local event = ReplicatedStorage:FindFirstChild("Events"):FindFirstChild("ExtractionComplete")
     if event then
         event:FireClient(player)
@@ -149,12 +149,19 @@ function ExtractionPoint:CompleteExtraction(player)
     -- Remove from extraction
     self.PlayersInRange[player] = nil
 
-    -- Teleport to safe house or reset
+    -- Call global extraction callback
+    if ExtractionSystem.OnPlayerExtracted then
+        ExtractionSystem.OnPlayerExtracted(player, self.Name)
+    end
+
+    -- Teleport to safe zone
     if player.Character then
-        -- Teleport to safe zone
         local safeZone = workspace:FindFirstChild("SafeZone")
         if safeZone then
-            player.Character:SetPrimaryPartCFrame(safeZone.CFrame + Vector3.new(0, 5, 0))
+            player.Character:SetPrimaryPartCFrame(CFrame.new(-200, 10, 0))
+        else
+            -- Fallback spawn
+            player.Character:SetPrimaryPartCFrame(CFrame.new(0, 10, 0))
         end
     end
 end

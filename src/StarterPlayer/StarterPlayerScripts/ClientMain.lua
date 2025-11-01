@@ -17,6 +17,7 @@ local events = ReplicatedStorage:WaitForChild("Events")
 -- Load HUD
 local HUD = require(StarterGui:WaitForChild("HUD"))
 local InventoryGUI = require(StarterGui:WaitForChild("InventoryGUI"))
+local MapUI = require(StarterGui:WaitForChild("MapUI"))
 
 print("UI modules loaded")
 
